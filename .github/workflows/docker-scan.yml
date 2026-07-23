@@ -1,0 +1,17 @@
+name: Docker Image Scan with Datadog
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify Runner
+        run: |
+          echo "GitHub Actions Runner is working!"
+          uname -a
